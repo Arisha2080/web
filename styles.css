@@ -1,0 +1,76 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* темный фон */
+    color: #e0e0e0; /* светлый текст */
+}
+
+/* Заголовок и контейнеры */
+.header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 10px 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Карточки лабораторных работ */
+.lab-card {
+    background-color: #2c2c2c;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Эффект при наведении */
+.lab-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+/* Статусы */
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.status-completed {
+    background-color: #4caf50; /* зеленый */
+}
+
+.status-in-progress {
+    background-color: #ff9800; /* оранжевый */
+}
+
+/* Кнопка переключения темы — убираем, так как только темная тема */
+.theme-toggle {
+    display: none;
+}
+
+/* Визуальные компоненты */
+.sun-icon, .moon-icon {
+    fill: #ffd700; /* желтый для солнца и луны, можно изменить */
+}
+
+/* Общий стиль для ссылок */
+.task-link {
+    color: #81d4fa; /* светло-голубой */
+    text-decoration: none;
+}
+
+.task-link:hover {
+    text-decoration: underline;
+}
