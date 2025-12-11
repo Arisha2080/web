@@ -29,7 +29,7 @@ class NewsDB implements INewsDB, IteratorAggregate {
     /**
      * Ссылка на новостную ленту
      */
-    const RSS_LINK = 'http://f1172321.xsph.ru/lab5/news.php';
+    const RSS_LINK = 'https://arisha.infinityfree.me/lab5/news.php';
     
     /**
      * Экземпляр класса SQLite3
@@ -294,7 +294,8 @@ class NewsDB implements INewsDB, IteratorAggregate {
         }
         
         // Сохранение файла
-        $dom->save(self::RSS_NAME);
+        $dom->save(__DIR__ . "/" . self::RSS_NAME);
+
     }
 }
 ?>
