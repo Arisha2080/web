@@ -33,7 +33,7 @@ $rssExists = file_exists(NewsDB::RSS_NAME);
 	<h1>
 		Последние новости
 		<?php if ($rssExists): ?>
-			<a href="<?= NewsDB::RSS_NAME ?>" class="rss-link" title="RSS лента">RSS Feed</a>
+			<a href="rss.php" class="rss-link" title="RSS лента">RSS Feed</a>
 		<?php endif; ?>
 	</h1>
 

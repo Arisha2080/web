@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Последние новости</title>
+    <link>https://arisha.infinityfree.me/lab5/news.php</link>
+    <item>
+      <title>ФФФФФ</title>
+      <link>https://arisha.infinityfree.me/lab5/news.php?id=3</link>
+      <description><![CDATA[-----------------------]]></description>
+      <pubDate>Thu, 11 Dec 2025 06:14:27 -0500</pubDate>
+      <category>Спорт</category>
+    </item>
+    <item>
+      <title>--------</title>
+      <link>https://arisha.infinityfree.me/lab5/news.php?id=2</link>
+      <description><![CDATA[-----------]]></description>
+      <pubDate>Thu, 11 Dec 2025 05:23:10 -0500</pubDate>
+      <category>Культура</category>
+    </item>
+    <item>
+      <title>Выставка</title>
+      <link>https://arisha.infinityfree.me/lab5/news.php?id=1</link>
+      <description><![CDATA[------]]></description>
+      <pubDate>Thu, 11 Dec 2025 04:40:25 -0500</pubDate>
+      <category>Культура</category>
+    </item>
+  </channel>
+</rss>
