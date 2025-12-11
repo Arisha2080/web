@@ -19,6 +19,7 @@ class NewsDB implements INewsDB, IteratorAggregate {
     /**
      * Имя RSS файла
      */
+    
     const RSS_NAME = 'rss.xml';
     
     /**
@@ -294,7 +295,7 @@ class NewsDB implements INewsDB, IteratorAggregate {
         }
         
         // Сохранение файла
-        $dom->save(__DIR__ . "/rss.xml"); 
+        $dom->save($_SERVER['DOCUMENT_ROOT'] . "/rss.xml"); 
 
     }
 }
