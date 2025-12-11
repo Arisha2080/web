@@ -295,8 +295,9 @@ class NewsDB implements INewsDB, IteratorAggregate {
         }
         
         // Сохранение файла
-        $dom->save($_SERVER['DOCUMENT_ROOT'] . "/rss.xml"); 
-
+        // Сохранение файла
+        $dom->save(__DIR__ . "/" . self::RSS_NAME);
+ 
     }
 }
 ?>

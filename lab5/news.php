@@ -24,7 +24,7 @@ $rssExists = file_exists(NewsDB::RSS_NAME);
 <head>
 	<title>Новостная лента с RSS</title>
 	<meta charset="utf-8">
-	<link rel="alternate" type="application/rss+xml" title="RSS" href="<?= NewsDB::RSS_NAME ?>">
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.php">
 	<link rel="stylesheet" href="css/news.css">
 </head>
 
