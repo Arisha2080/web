@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #121212; /* тёмный фон */
+    color: #e0e0e0; /* светлый текст */
+}
+
+h1 {
+    color: #ffffff;
+    border-bottom: 2px solid #BB86FC; /* мягкий фиолетовый акцент */
+    padding-bottom: 10px;
+}
+
+form {
+    background: #1e1e1e; /* тёмный блок формы */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+form input[type="text"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #333;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+}
+
+form input[type="submit"] {
+    background-color: #BB86FC;
+    color: #121212;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #985EFF;
+}
+
+.error {
+    background-color: #cf6679; /* красный акцент для ошибок */
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+.news-container {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.news-item {
+    border: 1px solid #333;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    background-color: #2a2a2a;
+}
+
+.news-item h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.news-item p {
+    margin: 8px 0;
+    color: #e0e0e0;
+}
+
+.news-item a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #BB86FC;
+}
+
+.news-item a:hover {
+    text-decoration: underline;
+}
+
+.uml-link {
+    display: inline-block;
+    background-color: #03DAC6; /* яркий акцент для кнопок */
+    color: #121212;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.uml-link:hover {
+    background-color: #00bfa5;
+}
+
+.back-link {
+    display: inline-block;
+    background-color: #BB86FC;
+    color: #121212;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 15px 10px 15px 0;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    background-color: #985EFF;
+}

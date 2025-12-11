@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #121212; /* тёмный фон */
+    color: #e0e0e0; /* светлый текст */
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    border-bottom: 2px solid #BB86FC; /* мягкий фиолетовый акцент */
+    padding-bottom: 10px;
+}
+
+.diagram-container {
+    background: #1e1e1e; /* тёмный блок */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 20px 0;
+}
+
+.description {
+    background: #2a2a2a; /* тёмный блок для описаний */
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.back-link {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #BB86FC; /* фиолетовый акцент */
+    color: #121212;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.back-link:hover {
+    background-color: #985EFF;
+}
+
+pre {
+    background: #1e1e1e; /* тёмный фон для кода */
+    color: #e0e0e0; /* светлый текст */
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    text-align: left;
+}
