@@ -1,11 +1,11 @@
 <?php
-// Вызов метода getNews()
+
 $newsItems = $news->getNews();
 
 // Проверка успешности запроса
-if ($newsItems === false) {
+if ($newsItems === false)
     $errMsg = "Произошла ошибка при выводе новостной ленты";
-} else {
+else {
     // Получение количества записей
     $count = count($newsItems);
     
@@ -23,16 +23,16 @@ if ($newsItems === false) {
             
             // Вывод новости
             echo <<<HTML
-            <div class="news-item">
+            <div style="border: 1px solid #ccc; margin: 10px 0; padding: 10px; border-radius: 5px;">
                 <h3>$title</h3>
                 <p><strong>Категория:</strong> $category</p>
                 <p>$description</p>
                 <p><strong>Источник:</strong> $source</p>
                 <p><small>Дата: $datetime</small></p>
                 <p>
-                    <a href="news.php?id=$id" style="color: blue;">Подробнее</a> |
-                    <a href="news.php?del_id=$id" style="color: red;"
-                       onclick="return confirm('Вы уверены, что хотите удалить эту новость?')">Удалить</a>
+                    <a href="news.php?id=$id" style="color: blue;">Подробнее</a> | 
+                    <a href="news.php?del_id=$id" style="color: red;" 
+                       onclick="return confirm('Точно хотите удалить эту новость?')">Удалить</a>
                 </p>
             </div>
             HTML;
