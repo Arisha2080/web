@@ -8,14 +8,34 @@ class Users extends Collection
         $users ??= [
             new User(
                  'dmitry.koterov@gmail.com',
-                 'password',
+                 'password1',
                  'Дмитрий',
                  'Котеров'),
             new User(
                  'igorsimdyanov@gmail.com',
-                 'password',
+                 'password2',
                  'Игорь',
-                 'Симдянов')
+                 'Симдянов'),
+            new User(
+                 'ivanov@sample.sample',
+                 'password3',
+                 'Иван',
+                 'Иванов'),
+            new User(
+                 'petrov@sample.sample',
+                 'password4',
+                 'Алексей',
+                 'Петров'),
+            new User(
+                 'stepin@sample.sample',
+                 'password5',
+                 'Кирилл',
+                 'Стёпин'),
+            new User(
+                 'egorov@sample.sample',
+                 'password6',
+                 'Роман',
+                 'Егоров')
         ];
         parent::__construct($users);
     }

@@ -4,17 +4,23 @@
     {abstract} +render()
   }
   package models as models {
+    class "Pages" as models_Pages {
+      +pages : ?array
+      +__construct(pages)
+      +render()
+    }
+    class "Page" as models_Page {
+      +title : string
+      +content : string
+      +__construct(title, content)
+      +render()
+    }
     class "User" as models_User {
       +email : string
       -password : string
       +first_name : ?string
       +last_name : ?string
       +__construct(email, password, first_name, last_name)
-      +render()
-    }
-    class "Pages" as models_Pages {
-      +pages : ?array
-      +__construct(pages)
       +render()
     }
     class "Users" as models_Users {
@@ -25,12 +31,6 @@
       +collection : ?array
       +__construct(collection)
       +renders()
-      +render()
-    }
-    class "Page" as models_Page {
-      +title : string
-      +content : string
-      +__construct(title, content)
       +render()
     }
   }

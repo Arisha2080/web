@@ -1,4 +1,62 @@
 @startuml class-diagram
+  package decorators as decorators {
+    class "UserDecorator" as decorators_UserDecorator {
+      +user : 
+      +__construct(user)
+      +title()
+      +body()
+      +items()
+      +bodyMd()
+    }
+    class "DecoratorFactory" as decorators_DecoratorFactory {
+      {static} +create(class, model)
+      {abstract} +title()
+      {abstract} +body()
+      {abstract} +items()
+    }
+    class "UsersDecorator" as decorators_UsersDecorator {
+      +users : 
+      +__construct(users)
+      +title()
+      +collection_render(call, separator)
+      +body()
+      +items()
+      +bodyMd()
+    }
+  }
+  package views as views {
+    class "HtmlView" as views_HtmlView {
+      #replacements : 
+      +__construct(decorator)
+      +render()
+    }
+    class "UsersMdView" as views_UsersMdView {
+    }
+    class "RssView" as views_RssView {
+      #replacements : 
+      +__construct(decorator)
+      +render()
+    }
+    class "UserHtmlView" as views_UserHtmlView {
+    }
+    class "UsersHtmlView" as views_UsersHtmlView {
+    }
+    class "UsersRssView" as views_UsersRssView {
+    }
+    class "UserMdView" as views_UserMdView {
+    }
+    class "UserRssView" as views_UserRssView {
+    }
+    class "ViewFactory" as views_ViewFactory {
+      {abstract} +render()
+      {static} +create(type, class, decorator)
+    }
+    class "MdView" as views_MdView {
+      #replacements : 
+      +__construct(decorator)
+      +render()
+    }
+  }
   package controllers as controllers {
     class "Router" as controllers_Router {
       +model : string
@@ -29,53 +87,6 @@
       +__construct(users)
     }
   }
-  package decorators as decorators {
-    class "UsersDecorator" as decorators_UsersDecorator {
-      +users : 
-      +__construct(users)
-      +title()
-      +collection_render(call, separator)
-      +body()
-      +items()
-    }
-    class "DecoratorFactory" as decorators_DecoratorFactory {
-      {static} +create(class, model)
-      {abstract} +title()
-      {abstract} +body()
-      {abstract} +items()
-    }
-    class "UserDecorator" as decorators_UserDecorator {
-      +user : 
-      +__construct(user)
-      +title()
-      +body()
-      +items()
-    }
-  }
-  package views as views {
-    class "RssView" as views_RssView {
-      #replacements : 
-      +__construct(decorator)
-      +render()
-    }
-    class "UserHtmlView" as views_UserHtmlView {
-    }
-    class "UserRssView" as views_UserRssView {
-    }
-    class "ViewFactory" as views_ViewFactory {
-      {abstract} +render()
-      {static} +create(type, class, decorator)
-    }
-    class "UsersRssView" as views_UsersRssView {
-    }
-    class "HtmlView" as views_HtmlView {
-      #replacements : 
-      +__construct(decorator)
-      +render()
-    }
-    class "UsersHtmlView" as views_UsersHtmlView {
-    }
-  }
   controllers_Controller ..> controllers_Router
   controllers_Controller ..> decorators_DecoratorFactory
   controllers_Controller ..> views_ViewFactory
@@ -88,10 +99,13 @@
   models_Users ..> models_User
   views_HtmlView <|-- views_UserHtmlView
   views_HtmlView <|-- views_UsersHtmlView
+  views_MdView <|-- views_UserMdView
+  views_MdView <|-- views_UsersMdView
   views_RssView <|-- views_UserRssView
   views_RssView <|-- views_UsersRssView
   views_ViewFactory ..> decorators_DecoratorFactory
   views_ViewFactory ..> views_ViewFactory
   views_ViewFactory <|-- views_HtmlView
+  views_ViewFactory <|-- views_MdView
   views_ViewFactory <|-- views_RssView
 @enduml

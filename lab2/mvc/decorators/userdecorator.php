@@ -24,7 +24,6 @@ class UserDecorator extends DecoratorFactory
                    htmlspecialchars($this->title()) .
               '</strong> '.
                '(' . htmlspecialchars($this->user->email) . ')';
-
     }
 
     public function items() : string
@@ -37,5 +36,17 @@ class UserDecorator extends DecoratorFactory
                    htmlspecialchars($this->user->email) .
                '</email>' .
                '</item>';
+    }
+
+    // Новый метод для Markdown
+    public function bodyMd() : string
+    {
+        return sprintf(
+            "**%s**\n\n- Email: `%s`\n- Имя: %s\n- Фамилия: %s",
+            $this->title(),
+            $this->user->email,
+            $this->user->first_name ?? 'Не указано',
+            $this->user->last_name ?? 'Не указано'
+        );
     }
 }
