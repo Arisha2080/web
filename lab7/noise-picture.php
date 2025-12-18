@@ -25,7 +25,7 @@ $startY = 30;                               // Начальная y
 // Генерация случайной уникальной строки
 // буквы и цифры кроме похожих: 0, O, I, l
 $characters = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-$captchaLength = rand(5, 6);            // Длина строки 5-6 символов
+$captchaLength = 5;           
 $captchaText = '';
 
 for ($i = 0; $i < $captchaLength; $i++)
