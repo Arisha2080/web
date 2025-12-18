@@ -22,7 +22,7 @@
     +RSS_NAME : string
     +RSS_TITLE : string
     +RSS_LINK : string
-    -_db : SQLite3
+    -_db : PDO
     -items : array
     #getDb()
     +__construct()
@@ -35,7 +35,7 @@
     +createRss()
   }
 
-  class "SQLite3\n<b>Встроенный класс PHP</b>" as SQLite3
+  class "PDO\n<b>Встроенный класс PHP</b>" as PDO
 
   class "ArrayIterator\n<b>Встроенный класс PHP</b>" as ArrayIterator
 
@@ -44,7 +44,7 @@
   INewsDB <|-- NewsDB
   IteratorAggregate <|-- NewsDB
   Iterator <|.. ArrayIterator
-  NewsDB *-- SQLite3
+  NewsDB *-- PDO
   NewsDB ..> ArrayIterator : <<create>>
   NewsDB ..> DOMDocument : <<create>>
 @enduml
