@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+date_default_timezone_set('Europe/Moscow');
 /**
  * Класс NumbersSquared
  * Итератор для последовательности чисел, возводящий их в квадрат

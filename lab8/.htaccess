@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /lab8
+
+# Не перенаправлять существующие файлы и папки
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Обработка всех остальных запросов через index.php
+RewriteRule ^ index.php [QSA,L]
