@@ -41,8 +41,8 @@
 
   class "DOMDocument\n<b>Встроенный класс PHP</b>" as DOMDocument
 
-  INewsDB <|-- NewsDB
-  IteratorAggregate <|-- NewsDB
+  INewsDB <|.. NewsDB
+  IteratorAggregate <|.. NewsDB
   Iterator <|.. ArrayIterator
   NewsDB *-- PDO
   NewsDB ..> ArrayIterator : <<create>>
